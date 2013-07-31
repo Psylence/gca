@@ -36,11 +36,23 @@
 				<h1>Test App</h1>
 			</div>
 			<div data-role="content" data-theme="f">
-				<div data-role="button" onClick="scan_code_test('#result')">Scan</div>
+				<div id="scan_btn" data-role="button">Scan</div>
+				<p id="called"></p>
 				<p id="result"></p>
 			</div>
 		</div>
 		
 		<script type="text/javascript" src="phonegap.js"></script>
+		<script src="barcodescanner.js"></script>
+		<script>
+			// Initialize scripts
+			$(document).ready(function() {
+				// Bind buttons
+				$("#scan_btn").click(function() {
+					scan_code_test();
+				});
+			
+			});
+		</script>
 	</body>
 </html>
