@@ -1,3 +1,5 @@
+import urls.js;
+
 function gca_swap_desc(hideClass, showName)
 {
 	$("." + hideClass).hide();
@@ -6,19 +8,18 @@ function gca_swap_desc(hideClass, showName)
 
 function scan_code_test(targetElement)
 {
-	$("#called").text("Called");
-
 	var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
 	scanner.scan(
 		function (result) {
-			$("#result").text("We got a barcode\n" +
-					"Result: " + result.text + "\n" +
-					"Format: " + result.format + "\n" +
-					"Cancelled: " + result.cancelled);
+			if(result.text in urls) {
+				$.mobile.changePage(urls[result.text]);
+			} else {
+				document.location.href = result.text;
+			}
 		}, 
 		function (error) {
-			$("#result").text("Scanning failed: " + error);
+			alert("Failed to scan.");
 		}
 	);
 }
