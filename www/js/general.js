@@ -5,16 +5,13 @@ function gca_swap_desc(hideClass, showName)
 }
 
 function scan_code()
-{
-	alert("Called2");
-	
+{	
 	var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
-	alert("Cordova");
 	scanner.scan(
 		function (result) {
 			if(result.text in urls) {
-				$.mobile.changePage(urls[result.text]);
+				$.mobile.changePage("#tank_" + urls[result.text]);
 			} else {
 				alert("Outside page.");
 			}
@@ -23,8 +20,6 @@ function scan_code()
 			alert("Failed to scan.");
 		}
 	);
-	
-	alert("End");
 }
 
 $(document).ready(function() {
