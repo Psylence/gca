@@ -6,7 +6,7 @@ function gca_swap_desc(hideClass, showName)
 	$("#" + showName).show();
 }
 
-function scan_code_test(targetElement)
+function scan_code()
 {
 	var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
@@ -23,3 +23,9 @@ function scan_code_test(targetElement)
 		}
 	);
 }
+
+$(document).ready(function() {
+	$(".scanner_btn").click(function() {
+		scan_code();
+	});
+});
