@@ -2,7 +2,7 @@
 <widget id="com.phonegap.hello-world" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>GreaterClevelandAquarium</name>
     <description>
-        An informative tour app designed to give additional information on the fish in the aquarium.
+        An informative tour app designed to give additional information on the animals in the aquarium.
     </description>
     <author email="support@greaterclevelandaquarium.com" href="http://greaterclevelandaquarium.com/m/">
         Greater Cleveland Aquarium

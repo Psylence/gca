@@ -11,7 +11,7 @@ function scan_code()
 	scanner.scan(
 		function (result) {
 			if(result.text in urls) {
-				$.mobile.changePage("#tank_" + urls[result.text]);
+				$.mobile.changePage(urls[result.text]);
 			} else {
 				alert("Outside page.");
 			}
