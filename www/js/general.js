@@ -6,10 +6,11 @@ function gca_swap_desc(hideClass, showName)
 
 function scan_code()
 {
-	alert("Called");
+	alert("Called1");
 	
 	var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
+	alert("Cordova");
 	scanner.scan(
 		function (result) {
 			if(result.text in urls) {
