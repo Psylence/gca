@@ -1,5 +1,3 @@
-import urls.js;
-
 function gca_swap_desc(hideClass, showName)
 {
 	$("." + hideClass).hide();
