@@ -15,13 +15,15 @@ function scan_code()
 			if(result.text in urls) {
 				$.mobile.changePage(urls[result.text]);
 			} else {
-				document.location.href = result.text;
+				alert("Outside page.");
 			}
 		}, 
 		function (error) {
 			alert("Failed to scan.");
 		}
 	);
+	
+	alert("End");
 }
 
 $(document).ready(function() {
